@@ -1,6 +1,7 @@
 import {
   Avatar,
   Burger,
+  Button,
   Center,
   Collapse,
   Container,
@@ -12,9 +13,10 @@ import {
   UnstyledButton,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { NavLink, useNavigate } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import classes from "./HeaderMenu.module.css";
 import { IconChevronDown } from "@tabler/icons-react";
+import Logo from "../utils/Logo/Logo";
 
 const links = [
   { link: "/about", label: "Features" },
@@ -90,10 +92,15 @@ export function Navbar() {
     <header className={classes.header}>
       <Container size="lg">
         <div className={classes.inner}>
-          <h3 className="text-2xl font-semibold text-amber-600">UrbanRest</h3>
+          <Logo />
+
           <Group gap={10} visibleFrom="sm">
             {items}
           </Group>
+
+          <Link to={"/auth/login"}>
+            <Button>Login</Button>
+          </Link>
 
           <Burger
             opened={opened}

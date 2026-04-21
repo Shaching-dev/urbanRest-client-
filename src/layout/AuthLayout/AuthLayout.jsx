@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, Outlet } from "react-router";
 
 import { motion } from "motion/react";
+import Logo from "../../components/utils/Logo/Logo";
 
 const containerVariants = {
   hidden: { opacity: 0, x: -200 },
@@ -34,7 +35,7 @@ const AuthLayout = () => {
       >
         {/* Title */}
         <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">
-          Welcome to UrbanRest
+          Welcome to <Logo />
         </h3>
 
         {/* Nav Links */}

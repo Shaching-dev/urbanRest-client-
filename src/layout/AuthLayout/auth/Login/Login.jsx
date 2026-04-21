@@ -16,6 +16,7 @@ import { User, Mail, Lock, Camera } from "lucide-react";
 import "@mantine/core/styles.css";
 
 import { motion } from "motion/react";
+import { Link } from "react-router";
 
 const containerVariants = {
   hidden: { opacity: 1 },
@@ -121,9 +122,12 @@ export function Login() {
               {/* Footer */}
               <Text size="sm" ta="center" mt="md" c="dimmed">
                 Already have an account?{" "}
-                <span className="text-blue-600 cursor-pointer hover:underline">
+                <Link
+                  to={"/auth/register"}
+                  className="text-blue-600 cursor-pointer hover:underline"
+                >
                   Register
-                </span>
+                </Link>
               </Text>
             </motion.form>
           </Paper>

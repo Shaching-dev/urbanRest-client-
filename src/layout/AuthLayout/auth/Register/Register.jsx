@@ -16,6 +16,7 @@ import { User, Mail, Lock, Camera, X } from "lucide-react";
 import "@mantine/core/styles.css";
 
 import { motion } from "motion/react";
+import { Link } from "react-router";
 
 // Parent animation (controls children stagger)
 const containerVariants = {
@@ -183,9 +184,12 @@ export function Register() {
                 <motion.div variants={itemVariants}>
                   <Text size="sm" ta="center" mt="md" c="dimmed">
                     Already have an account?{" "}
-                    <span className="text-blue-600 cursor-pointer hover:underline">
+                    <Link
+                      to={"/auth/login"}
+                      className="text-blue-600 cursor-pointer hover:underline"
+                    >
                       Login
-                    </span>
+                    </Link>
                   </Text>
                 </motion.div>
               </motion.form>
