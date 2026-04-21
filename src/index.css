@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.btn {
+  @apply bg-black/5 text-black font-semibold px-5 py-2 rounded-md hover:bg-amber-600 hover:text-white duration-500;
+}
